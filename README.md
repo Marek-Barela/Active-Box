@@ -2,7 +2,7 @@
 
 My first Template created in 2017 during bootcam KODILLA
 
-Used techonology :
+Used technology :
 - HTML
 - CSS
 - SASS
