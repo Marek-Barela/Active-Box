@@ -354,6 +354,8 @@ footer {
     .features .row .col-sm-12 p {
       width: 250px;
       margin: auto; }
+  .gallery .col-md-3 {
+    padding: 20px; }
   .team .col-sm-6 {
     margin-bottom: 40px;
     text-align: center; }
