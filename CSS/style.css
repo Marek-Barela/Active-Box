@@ -9,8 +9,16 @@
   padding: 15px 15px;
   display: inline-block;
   cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  -o-transition-property: opacity, filter;
   transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+  -o-transition-duration: 0.15s;
   transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
   transition-timing-function: linear;
   font: inherit;
   color: inherit;
@@ -36,10 +44,19 @@
     width: 40px;
     height: 4px;
     background-color: #e84545;
+    -webkit-border-radius: 4px;
     border-radius: 4px;
     position: absolute;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
     transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 0.15s;
+    -o-transition-duration: 0.15s;
     transition-duration: 0.15s;
+    -webkit-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
     transition-timing-function: ease; }
   .hamburger-inner::before, .hamburger-inner::after {
     content: "";
@@ -53,55 +70,108 @@
    * Spin
    */
 .hamburger--spin .hamburger-inner {
+  -webkit-transition-duration: 0.22s;
+  -o-transition-duration: 0.22s;
   transition-duration: 0.22s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -o-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    -o-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
     transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
-    transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+    -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    -o-transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
 
 .hamburger--spin.is-active .hamburger-inner {
+  -webkit-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
   transform: rotate(225deg);
+  -webkit-transition-delay: 0.12s;
+  -o-transition-delay: 0.12s;
   transition-delay: 0.12s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    -o-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
     transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
     transform: rotate(-90deg);
-    transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+    -webkit-transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
 /*
    * Spin Reverse
    */
 .hamburger--spin-r .hamburger-inner {
+  -webkit-transition-duration: 0.22s;
+  -o-transition-duration: 0.22s;
   transition-duration: 0.22s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -o-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin-r .hamburger-inner::before {
+    -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+    -o-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
     transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
   .hamburger--spin-r .hamburger-inner::after {
-    transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+    -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    -o-transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
 
 .hamburger--spin-r.is-active .hamburger-inner {
+  -webkit-transform: rotate(-225deg);
+  -ms-transform: rotate(-225deg);
   transform: rotate(-225deg);
+  -webkit-transition-delay: 0.12s;
+  -o-transition-delay: 0.12s;
   transition-delay: 0.12s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  -o-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
   .hamburger--spin-r.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
+    -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+    -o-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
     transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
   .hamburger--spin-r.is-active .hamburger-inner::after {
     bottom: 0;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+    -webkit-transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -o-transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 .container {
   max-width: 1200px;
+  margin: 0 auto; }
+
+.container--large {
+  max-width: 1600px;
   margin: 0 auto; }
 
 .row:after, .row:before {
@@ -126,7 +196,8 @@ a {
   height: 46px;
   text-transform: uppercase;
   color: white;
-  font-size: 11px; }
+  font-size: 11px;
+  cursor: pointer; }
 
 body {
   font-family: 'Raleway', sans-serif; }
@@ -136,6 +207,7 @@ header {
   min-height: 380px;
   background-image: url(../images/bgheader.png);
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
   background-size: cover; }
 
 .header__logo {
@@ -163,10 +235,13 @@ header {
   color: white;
   text-align: center;
   font-weight: bold;
-  font-size: 1em; }
+  font-size: 1em;
+  text-transform: uppercase; }
   .navigation__item a {
     padding: 20px;
     display: block;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s; }
     .navigation__item a:hover {
       background-color: rgba(255, 255, 255, 0.5);
@@ -182,6 +257,8 @@ header {
   position: absolute;
   top: 63%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 100%;
   padding: 0 10px;
@@ -208,8 +285,18 @@ header {
   text-align: center; }
 
 .feature-section__feature-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 40px; }
 
@@ -241,10 +328,23 @@ header {
 
 .gallery-item__layer--red {
   position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   color: white;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   background-color: rgba(232, 69, 69, 0.8);
   width: 100%;
@@ -252,6 +352,8 @@ header {
   top: 0;
   left: 0;
   opacity: 0;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
   transition: opacity .5s; }
   .gallery-item__layer--red:hover {
     opacity: 1; }
@@ -293,6 +395,9 @@ header {
   margin: 24px 0; }
 
 .team-member__team-media {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex; }
 
 .team-media__item {
@@ -308,14 +413,26 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
 
 .quote-section {
   padding: 40px 0; }
 
 .quote-section__carousel {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center; }
   .quote-section__carousel img {
     max-width: 100%; }
@@ -334,12 +451,15 @@ header {
 
 .quote-container__quote-item {
   position: absolute;
-  top: 15%;
+  top: 50%;
   left: 15px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   color: #ffffff; }
 
 .quote-item__paragraph {
-  font-size: 1em;
+  font-size: 0.9em;
   font-style: italic;
   margin: 0 30px 10px 0;
   line-height: 18px;
@@ -352,13 +472,20 @@ header {
   padding: 10px; }
 
 .quote-item__bubbles {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-top: 10px; }
   .quote-item__bubbles .bubble {
     width: 8px;
     height: 8px;
     margin-right: 5px;
+    -webkit-border-radius: 100%;
     border-radius: 100%;
     background-color: white; }
 
@@ -394,7 +521,13 @@ footer {
   padding: 20px 10px; }
 
 .footer-share__share-media {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center; }
 
 .footer__header {
@@ -420,6 +553,8 @@ footer {
     position: absolute;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
 
 .footer__copyright {
@@ -439,16 +574,12 @@ footer {
 
 @media only screen and (min-width: 320px) {
   .quote-item__paragraph {
-    font-size: 1em; }
-  .quote-container__quote-item {
-    top: 25%; } }
+    font-size: 1em; } }
 
 @media only screen and (min-width: 400px) {
   .quote-item__paragraph {
     font-size: 1.2em;
     line-height: 22px; }
-  .quote-container__quote-item {
-    top: 32%; }
   .quote-item__bubbles {
     margin-top: 20px; } }
 
@@ -473,16 +604,14 @@ footer {
     font-size: 1.4em; }
   .quote-section__image-container, .quote-section__quote-container {
     max-width: 100%; }
-  .quote-container__quote-item {
-    top: 32%; }
   .quote-item__paragraph {
     font-size: 1.4em;
     letter-spacing: 1px;
     line-height: 30px; }
   .quote-item__author {
-    font-size: 0.7em; }
+    font-size: 0.6em; }
   .quote-item__bubbles {
-    margin-top: 30px; } }
+    margin-top: 40px; } }
 
 @media only screen and (min-width: 768px) {
   .col-4-sm {
@@ -492,24 +621,31 @@ footer {
   .header {
     position: relative;
     height: 580px; }
+  .header__logo {
+    left: 30px;
+    top: 35px; }
   .header__content {
     top: 55%;
     line-height: 24px; }
   .navigation__hidden-layer {
     display: block;
     position: relative;
-    width: 0;
-    height: 0;
-    min-height: 0; }
+    background-color: transparent;
+    min-height: 0;
+    height: 0; }
   .hamburger--spin {
     display: none; }
   .navigation__items {
-    width: 1000px;
-    position: absolute;
-    top: 30px;
-    right: 0; }
+    padding: 30px;
+    float: right; }
   .navigation__item {
-    display: inline-block; }
+    display: inline-block;
+    font-size: 0.8em; }
+    .navigation__item a {
+      padding: 10px; }
+      .navigation__item a:hover {
+        background-color: transparent;
+        color: #e84545; }
   .content__main-header {
     font-size: 2.5em; }
   .content__main-paragraph {
@@ -529,18 +665,79 @@ footer {
     max-width: 960px;
     margin: 0 auto; }
   .quote-section__carousel {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
     flex-direction: row; }
   .quote-section__quote-container {
     margin-top: -7px; }
-  .quote-container__quote-item {
-    top: 16%; }
   .quote-item__paragraph {
     font-size: 1em; } }
 
 @media only screen and (min-width: 992px) {
-  body {
-    display: block; } }
+  .col-3-md {
+    width: 25%; }
+  .col-12-md {
+    width: 100%; }
+  .header {
+    height: 680px; }
+  .header__container {
+    position: relative;
+    height: 680px; }
+  .header__logo {
+    top: 45px; }
+  .navigation__item a {
+    padding: 20px; }
+  .content__main-header {
+    font-size: 3em;
+    padding: 0 100px;
+    line-height: 50px; }
+  .content__button {
+    margin: 60px auto 0 auto; }
+  .content__main-paragraph {
+    font-size: 1.2em;
+    padding: 0 60px; }
+  .gallery-section {
+    padding: 40px 0; }
+  .gallery-section__main-column {
+    margin-bottom: -3px; }
+  .gallery-section__row {
+    max-width: 100%; }
+  .gallery-item__header {
+    font-size: 0.8em; }
+  .gallery-item__paragraph {
+    font-size: 0.8em; }
+  .team-section__team-member {
+    padding: 0 10px; }
+  .team-member__description {
+    text-align: left; }
+  .quote-container__quote-item {
+    left: 50px; }
+  .quote-item__paragraph {
+    font-size: 1.5em; } }
 
 @media only screen and (min-width: 1200px) {
-  body {
-    display: none; } }
+  header {
+    height: 750px; }
+  .header__container {
+    height: 750px; }
+  .header__content {
+    top: 50%; }
+  .content__main-header {
+    font-size: 3.3em;
+    padding: 0 200px; }
+  .quote-container__quote-item {
+    top: 55%; }
+  .quote-item__paragraph {
+    font-size: 1.8em;
+    line-height: 35px;
+    margin: 0 30px 25px 0; }
+  .quote-item__author {
+    font-size: 0.8em; }
+  .quote-item__bubbles {
+    margin-top: 40px; } }
+
+@media only screen and (min-width: 1350px) {
+  .quote-item__paragraph {
+    line-height: 45px; } }
