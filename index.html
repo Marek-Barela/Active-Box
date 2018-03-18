@@ -9,28 +9,28 @@
 	<link href="https://fonts.googleapis.com/css?family=Cardo|Raleway:400,700" rel="stylesheet">
 </head>
 <body>
-	<header class="header">
-		<div class="header__container container">
+	<header id="header" class="header">
+		<div class="header__scicky-nav">
 			<div class="header__logo">
-				<img src="images/Logo.png" alt="Active Box">
+				<a href="#header"><img src="images/Logo.png" alt="Active Box"></a>
 			</div>
 			<nav class="header__navigation">
 				<div class="navigation__hidden-layer">
 					<ul class="navigation__items">
 						<li class="navigation__item">
-							<a href="#">Features</a>
+							<a href="#features">Features</a>
 						</li>
 						<li class="navigation__item">
-							<a href="#">Works</a>
+							<a href="#works">Works</a>
 						</li>
 						<li class="navigation__item">
-							<a href="#">Our Team</a>
+							<a href="#team">Our Team</a>
 						</li>
 						<li class="navigation__item">
-							<a href="#">Testimonials</a>
+							<a href="#testimonials">Testimonials</a>
 						</li>
 						<li class="navigation__item">
-							<a href="#">Download</a>
+							<a href="#download">Download</a>
 						</li>
 					</ul>
 				</div>
@@ -40,6 +40,8 @@
 					</span>
 				</button>
 			</nav>
+		</div>
+		<div class="header__container container">
 			<div class="header__content">
 				<div class="container">
 					<h1 class="content__main-header">Your Favorite One Page Multi Purpose Template</h1>
@@ -52,7 +54,7 @@
 		</div>
 	</header>
 	<main>
-		<section class="features-section">
+		<section id="features" class="features-section">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -98,7 +100,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="gallery-section">
+		<section id="works" class="gallery-section">
 			<div class="container--large">
 				<div class="row gallery-section__row">
 					<div class="col-12 gallery-section__main-column">
@@ -164,7 +166,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="team-section">
+		<section id="team" class="team-section">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -284,7 +286,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="quote-section">
+		<section id="testimonials" class="quote-section">
 			<div class="container--large">
 				<div class="row">
 					<div class="col-12 quote-section__carousel">
@@ -309,7 +311,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="download-section">
+		<section id="download" class="download-section">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -361,6 +363,9 @@
 			</p>
 		</div>
 	</footer>
-	<script src="./JS/fontawesome-all.min.js"></script>
+	<script src="JS/fontawesome-all.min.js"></script>
+	<script src="JS/jquery-3.3.1.min.js"></script>
+	<script src="JS/script.js"></script>
 </body>
+
 </html>
