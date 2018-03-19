@@ -1,11 +1,11 @@
-# Project-PSD-1
+# Project-PSD-1 Active Box
 
-My first Template created in 2017 during bootcam KODILLA
+Project based on PSD file from https://pixelbuddha.net/freebie/activebox-html-template
 
 Used technology :
-- HTML
-- CSS
+- HTML 5
+- CSS 3
+- JQuery
 - SASS
-- Bootstrap
-- RWD
+- RWD (Mobile First)
 - Gulp

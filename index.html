@@ -4,15 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ActiveBox</title>
-	<link rel="stylesheet" type="text/css" href="CSS/normalize.css">
-	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<link rel="stylesheet" type="text/css" href="CSS/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS/style.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Cardo|Raleway:400,700" rel="stylesheet">
 </head>
 <body>
 	<header id="header" class="header">
 		<div class="header__scicky-nav">
 			<div class="header__logo">
-				<a href="#header"><img src="images/Logo.png" alt="Active Box"></a>
+				<a href="#header">
+					<img src="images/Logo.png" alt="Active Box">
+				</a>
 			</div>
 			<nav class="header__navigation">
 				<div class="navigation__hidden-layer">
@@ -291,20 +293,33 @@
 				<div class="row">
 					<div class="col-12 quote-section__carousel">
 						<div class="col-12 col-6-sm quote-section__image-container">
-							<img src="images/carousel1.jpg" alt="Women">
+							<img class="quote--start quote--active" src="images/carousel1.jpg" alt="Women">
+							<img src="images/carousel2.jpg" alt="Women">
+							<img src="images/carousel3.jpg" alt="Man">
+							<img src="images/carousel4.jpg" alt="Women">
+							<img src="images/carousel5.jpg" alt="Women">
 						</div>
 						<div class="col-12 col-6-sm quote-section__quote-container">
 							<img src="images/carousel1.jpg">
-							<div class="quote-container__quote-item">
+							<div class="quote-container__quote-item quote--start quote--active">
 								<p class="quote-item__paragraph">“Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam...”</p>
 								<span class="quote-item__author">Susan Sims, Interaction Designer at XYZ</span>
-								<div class="quote-item__bubbles">
-									<span class="bubble"></span>
-									<span class="bubble"></span>
-									<span class="bubble"></span>
-									<span class="bubble"></span>
-									<span class="bubble"></span>
-								</div>
+							</div>
+							<div class="quote-container__quote-item">
+								<p class="quote-item__paragraph">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, expedita?”</p>
+								<span class="quote-item__author">Susan Sims, Interaction Designer at XYZ</span>
+							</div>
+							<div class="quote-container__quote-item">
+								<p class="quote-item__paragraph">“Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta velit libero iste odit iure doloremque numquam quae, qui ab quo?”</p>
+								<span class="quote-item__author">John Doe, Interaction Designer at XYZ</span>
+							</div>
+							<div class="quote-container__quote-item">
+								<p class="quote-item__paragraph">“Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia ut reiciendis, consectetur consequuntur maiores dicta.”</p>
+								<span class="quote-item__author">Susan Sims, Interaction Designer at XYZ</span>
+							</div>
+							<div class="quote-container__quote-item">
+								<p class="quote-item__paragraph">“Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, distinctio. Laborum, quia?”</p>
+								<span class="quote-item__author">Susan Sims, Interaction Designer at XYZ</span>
 							</div>
 						</div>
 					</div>
@@ -367,5 +382,4 @@
 	<script src="JS/jquery-3.3.1.min.js"></script>
 	<script src="JS/script.js"></script>
 </body>
-
 </html>
