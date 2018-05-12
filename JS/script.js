@@ -5,7 +5,7 @@ $(document).ready(function() {
     $navigationItem = $('.navigation__items'),
     $navigationHiddenLayer = $('.navigation__hidden-layer'),
     $hamburgerButton = $('.hamburger');
-    function scickyNav() {
+    function stickyNav() {
         if($(window).scrollTop()) {
             $stickyNavigation.addClass('scicky-nav--black');
             $logo.css('top', '20px');
@@ -53,6 +53,6 @@ $(document).ready(function() {
     setInterval(nextQuote, 5000)
     $('a[href*="#"]').on('click', scrollToLink)
     $hamburgerButton.on('click', toggleLayer)
-    $(window).on('scroll', scickyNav)
-    scickyNav()
+    $(window).on('scroll', stickyNav)
+    stickyNav()
 })
