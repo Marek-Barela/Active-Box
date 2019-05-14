@@ -1,4 +1,4 @@
-# Project-PSD-1 Active Box
+# Active Box
 
 Project based on PSD file from https://pixelbuddha.net/freebie/activebox-html-template
 
